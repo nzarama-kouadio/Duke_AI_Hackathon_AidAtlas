@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/components/*": ["app/components/*"],
+      "@/hooks/*": ["app/hooks/*"],
+      "@/stores/*": ["app/stores/*"],
+      "@/screens/*": ["app/screens/*"],
+      "@/utils/*": ["app/utils/*"],
+      "@/types/*": ["app/types/*"]
+    }
+  },
+  "include": ["app", "expo-env.d.ts"],
+  "exclude": ["node_modules", "dist"]
+}
