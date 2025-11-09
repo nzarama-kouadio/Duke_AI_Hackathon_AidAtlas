@@ -1,0 +1,30 @@
+# Node
+node_modules/
+dist/
+.turbo/
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.env
+.venv/
+.poetry/
+
+# Mac / OS artifacts
+.DS_Store
+
+# Coverage
+coverage/
+htmlcov/
+.pytest_cache/
+
+# Editor
+.idea/
+.vscode/

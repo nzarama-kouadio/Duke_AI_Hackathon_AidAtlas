@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "aidatlas-recommendation"
+version = "0.1.0"
+description = "Hybrid recommendation and personalization API for the AidAtlas platform."
+authors = ["AidAtlas Team <engineering@aidatlas.org>"]
+readme = "README.md"
+packages = [
+  { include = "app", from = "." }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.115.2"
+uvicorn = { extras = ["standard"], version = "^0.32.0" }
+pydantic = "^2.9.2"
+pydantic-settings = "^2.4.0"
+pandas = "^2.2.3"
+numpy = "^2.1.2"
+scikit-learn = "^1.5.2"
+redis = "^5.1.0"
+httpx = "^0.27.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+pytest-asyncio = "^0.24.0"
+ruff = "^0.6.9"
+black = "^24.8.0"
+mypy = "^1.11.1"
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_configs = true
+warn_unused_ignores = true
+strict = true
+packages = ["app"]
+
+[build-system]
+requires = ["poetry-core>=1.9.0"]
+build-backend = "poetry.core.masonry.api"

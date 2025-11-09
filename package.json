@@ -1,0 +1,18 @@
+{
+  "name": "aidatlas",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "npm@10.9.4",
+  "workspaces": [
+    "apps/api",
+    "apps/mobile"
+  ],
+  "scripts": {
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "build": "turbo build"
+  },
+  "devDependencies": {
+    "turbo": "^2.6.0"
+  }
+}
